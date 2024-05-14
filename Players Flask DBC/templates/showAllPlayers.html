@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: beige;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <center>
+        <h1>Show All Players!!</h1>
+        <hr/>
+        <a href="/addPlayer">Add Player</a>
+        <br/>
+            <table  border="1" >
+                <tr><th>Pid</th><th>PName</th><th>Age</th><th>Role</th><th>Runs</th>
+                    <th>Matches</th><th>Wickets</th><th>Delete</th><th>Edit</th></tr>
+                    {%for player in players%}
+                    <tr>
+                        <form method="post" action="/performAction">
+                      {%for p in player%}
+                         <td>{{p}}</td>
+                      {%endfor%}
+                      <td>
+                        <input type="hidden" name="pid" value="{{player[0]}}"/><input type="submit" value="Delete" name="action"/></td>
+                      <td><input type="submit" value="Edit" name="action"/></td>
+                    </form>
+                    </tr>
+                    {%endfor%}
+            </table>
+
+        </form>
+    </center>
+</body>
+</html>

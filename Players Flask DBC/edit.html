@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Edit Player Record</h1>
+        <hr/>
+        <form method="post" action="/editPlayer">
+            <table border="1">
+               <tr> <input type="hidden" name="pid" value="{{record[0]}}"/></tr>
+              <tr>
+                <td><label for="pname">Player name</label></td>
+                <td><input type="text" name="pname" value="{{record[1]}}"required/></td>
+              </tr>  
+              <tr>
+                <td><label for="age">Player age</label></td>
+                <td><input type="number" name="age" value="{{record[2]}}" required/></td>
+              </tr> 
+              <tr>
+                <td><label for="role">Player role</label></td>
+                <td><input type="text" name="rolee" value="{{record[3]}}" required/></td>
+              </tr>
+              <tr>
+                <td><label for="runs">Player name</label></td>
+                <td><input type="number" name="runs" value="{{record[4]}}" required/></td>
+              </tr>
+              <tr>
+                <td><label for="wickets">Player name</label></td>
+                <td><input type="number" name="wickets" value="{{record[5]}}" required/></td>
+              </tr> 
+              <tr>
+                <td><label for="matches">Player name</label></td>
+                <td><input type="number" name="matches" value="{{record[6]}}" required/></td>
+              </tr>  
+              <tr><td><input type="submit" value="edit Player"/></td>
+                <td></td></tr> 
+
+
+            </table>
+
+        </form>
+    </center>          
+</body>
+</html>
