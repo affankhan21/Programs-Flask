@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table border="1">
+            <tr><td>Number of Clicks</td>
+                <td>{{clicks_count}}</td></tr>
+            
+        <tr><td><input type="submit" value="Click Here"/></td>
+        <td><input type="hidden" name="clicks_count" value="{{clicks_count}}"/>
+        </td></tr>
+        </table>
+    </form>
+
+</body>
+</html>
